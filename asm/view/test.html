@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh Sách Sản Phẩm - GameKeyX</title>
+    <link rel="stylesheet" href="../public/css/test2.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Bộ lọc sản phẩm -->
+        <aside class="filter">
+            <h2>Bộ Lọc</h2>
+            <div class="filter-group">
+                <h3>Thể Loại</h3>
+                <label><input type="checkbox"> Hành Động</label>
+                <label><input type="checkbox"> Nhập Vai</label>
+                <label><input type="checkbox"> Phiêu Lưu</label>
+                <label><input type="checkbox"> Chiến Thuật</label>
+            </div>
+            <div class="filter-group">
+                <h3>Giá</h3>
+                <label><input type="radio" name="price"> Dưới 100.000đ</label>
+                <label><input type="radio" name="price"> 100.000đ - 500.000đ</label>
+                <label><input type="radio" name="price"> Trên 500.000đ</label>
+            </div>
+            <button class="filter-btn">Áp Dụng</button>
+        </aside>
+
+        <!-- Danh sách sản phẩm -->
+        <main class="products">
+            <div class="product">
+                <img src="game1.jpg" alt="Game 1">
+                <h3>Cyberpunk 2077</h3>
+                <p>Thể loại: Nhập Vai</p>
+                <p class="price">499.000đ</p>
+                <button class="buy-btn">Mua Ngay</button>
+            </div>
+            <div class="product">
+                <img src="game2.jpg" alt="Game 2">
+                <h3>GTA V</h3>
+                <p>Thể loại: Hành Động</p>
+                <p class="price">299.000đ</p>
+                <button class="buy-btn">Mua Ngay</button>
+            </div>
+            <div class="product">
+                <img src="game3.jpg" alt="Game 3">
+                <h3>Red Dead Redemption 2</h3>
+                <p>Thể loại: Phiêu Lưu</p>
+                <p class="price">599.000đ</p>
+                <button class="buy-btn">Mua Ngay</button>
+            </div>
+            <div class="product">
+                <img src="game4.jpg" alt="Game 4">
+                <h3>Age of Empires IV</h3>
+                <p>Thể loại: Chiến Thuật</p>
+                <p class="price">399.000đ</p>
+                <button class="buy-btn">Mua Ngay</button>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

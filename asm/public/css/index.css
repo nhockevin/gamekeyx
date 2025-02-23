@@ -1,0 +1,424 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+/* Thiết lập chung */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #2b2b2b; /* Nền tối */
+    color: white;
+}
+
+/* ======== MENU ======== */
+.menu {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #000, #222);
+    padding: 0;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 255, 255, 0.3);
+    height: 80px;
+}
+
+.menu-left{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-self: flex-start;
+    height: 100%;
+    overflow: hidden;
+    padding-left: 100px;
+}
+
+.menu-left img{
+    height: 60px;
+    width: auto;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.menu-center{
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menu-right{
+    flex: 0,5;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-right: 30px;
+}
+
+.menu-right img{
+    height: 24px;
+    width: 24px;
+    vertical-align: middle;
+    padding-right: 10px;
+
+}
+.menu-right a{
+    color: #ddd;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 14px;
+}
+.menu-right a:hover{
+    color: #f00;
+    text-shadow: 0px 0px 8px rgb(255, 0, 0);
+}
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    display: inline-block;
+    position: relative;
+    margin: 10px 20px;
+}
+
+.menu ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Hiệu ứng hover */
+.menu ul li a:hover {
+    color: rgb(255, 0, 0);
+    text-shadow: 0px 0px 8px rgb(255, 0, 0);
+}
+
+/* Menu con */
+.menu ul li ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    min-width: 300px;
+    text-align: left;
+    padding: 0;
+    box-shadow: 0px 3px 10px rgba(0, 255, 255, 0.3);
+    border-radius: 5px;
+}
+
+/* Hiển thị menu con khi hover */
+.menu ul li:hover > ul {
+    display: block;
+}
+
+.menu ul li ul li {
+    display: block;
+    padding: 12px;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu ul li ul li a {
+    color: rgb(255, 255, 255);
+    transition: color 0.3s ease;
+}
+
+.menu ul li ul li a:hover {
+    color: #f00;
+    text-shadow: 0px 0px 8px #f00;
+}
+
+/* ======== HEADLINE (Phần giới thiệu chính) ======== */
+.introduce {
+    position: relative;
+    text-align: center;
+    padding: 60px 20px;
+    background: url('../img/background_index.jpg') no-repeat center center fixed;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 92vh;
+    width: 97,5%;
+    color: #ffffff;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+/* Tạo lớp overlay mờ giúp chữ nổi bật hơn */
+.introduce::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Lớp phủ tối */
+    z-index: 1;
+}
+
+/* Chỉnh lại phần chữ để không bị ảnh hưởng bởi overlay */
+.introduce-center {
+    position: relative;
+    z-index: 2;
+}
+
+/* Tiêu đề chính */
+.introduce-center h1 {
+    font-size: 70px;
+    font-weight: 800;
+    color: #ffffff;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+    font-style: italic;
+    display: inline-block;
+    animation: shaking 0.8s infinite;
+}
+
+/* Tiêu đề phụ */
+.introduce-center h2 {
+    font-size: 26px;
+    padding: auto;
+    font-weight: 400;
+    color: #f8f8f8;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.6);
+    font-family:'Times New Roman', Times, serif;
+    margin: auto 100px;
+}
+
+.introduce-center h3{
+    color: white;
+    font-size: 30px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 15%;
+}
+.introduce-center h3 a{
+    color: white;
+    text-decoration: none;
+}
+.introduce-center h3 a:hover{
+    color: aqua;
+    text-shadow: rgb(0, 255, 42);
+}
+/* ======== PHẦN GIỚI THIỆU ======== */
+.gt {
+    max-width: 80%;
+    margin: 30px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-left: 5px solid #f00;
+    box-shadow: 3px 3px 15px rgba(255, 0, 0, 0.3);
+    border-radius: 8px;
+}
+
+.gt p {
+    color: #ddd;
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: justify;
+    font-weight: 300;
+}
+
+.gt img{
+    width: calc(33.33% - 10px);
+    height: auto;
+    object-fit: cover;
+}
+/* ======== FOOTER ======== */
+.footer {
+    background: linear-gradient(90deg, #222, #444);
+    padding: 15px 0;
+    padding-bottom: 10px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    border-top: 3px solid #f00;
+    box-shadow: 0px -4px 10px rgba(255, 0, 0, 0.3);
+}
+
+.footer p {
+    margin: 0;
+    padding: 2px;
+}
+
+.footer p a{
+    text-decoration: none;
+    color: #bbb;
+}
+.slogan {
+    padding: 2px;
+    font-size: 25px;
+    font-weight: bold;
+}
+/* ======== RESPONSIVE ======== */
+@media (max-width: 768px) {
+    .menu ul li {
+        display: block;
+        text-align: left;
+    }
+
+    .menu ul li ul {
+        position: static;
+        display: block;
+        background: transparent;
+        box-shadow: none;
+    }
+
+    .gt {
+        max-width: 95%;
+        padding: 15px;
+    }
+
+    .index {
+        padding: 80px 20px;
+        font-size: 22px;
+    }
+}
+/*animation*/
+@keyframes shaking {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+}
+/*button*/
+
+#moveTopBtn {
+    position: fixed; /* Luôn cố định ở một vị trí */
+    bottom: 20px; /* Cách đáy 20px */
+    right: 20px; /* Cách phải 20px */
+    background-color: #ffcc00;
+    color: black;
+    border: none;
+    padding: 10px 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    opacity: 0; /* Mặc định ẩn */
+    transform: translateY(100px); /* Ẩn xuống dưới */
+}
+
+#moveTopBtn img{
+    height: 25px;
+    width: 20px;
+}
+
+#moveTopBtn.show {
+    opacity: 1; /* Hiện ra */
+    transform: translateY(0); /* Di chuyển lên */
+}
+
+#moveTopBtn:hover {
+    background-color: #ffaa00;
+    transform: scale(1.1);
+}
+
+
+/*slideshow*
+* { box-sizing: border-box; }
+body { font-family: Verdana, sans-serif; margin: 0; }
+.mySlides { display: none; }
+img { vertical-align: middle; }*/
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 100%; /* Giảm chiều rộng để không tràn */
+    width: 90vw;
+    height: 600px;
+    margin: 10px auto ; /* Tạo khoảng cách với menu và footer */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 20px;
+  margin-top: -20px;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next { right: 0; border-radius: 3px 0 0 3px; }
+
+.prev:hover, .next:hover { background-color: rgba(0,0,0,0.8); }
+
+.text {
+  color: #f2f2f2;
+  font-size: 20px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 8px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0px 1px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover { background-color: #717171; }
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from { opacity: 0.4; } 
+  to { opacity: 1; }
+}
+
+@media only screen and (max-width: 300px) {
+  .prev, .next, .text { font-size: 11px; }
+}
+.cham{
+    margin-bottom: 7px;
+    margin-top: -10px;
+}
+
+.mySlides img {
+    width: 100%; 
+    height: 100%; /* Giảm chiều cao để không bị che */
+    object-fit: fill;
+    border-radius: 10px; /* Bo góc nhẹ cho đẹp */
+}

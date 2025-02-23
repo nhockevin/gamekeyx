@@ -1,0 +1,341 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+/* Thiết lập chung */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #2b2b2b; /* Nền tối */
+    color: white;
+}
+
+/* ======== MENU ======== */
+.menu {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #000, #222);
+    padding: 0;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 255, 255, 0.3);
+    height: 80px;
+}
+
+.menu-left{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-self: flex-start;
+    height: 100%;
+    overflow: hidden;
+    padding-left: 100px;
+}
+
+.menu-left img{
+    height: 60px;
+    width: auto;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.menu-center{
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menu-right{
+    flex: 0,5;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-right: 30px;
+}
+
+.menu-right img{
+    height: 24px;
+    width: 24px;
+    vertical-align: middle;
+    padding-right: 10px;
+
+}
+.menu-right a{
+    color: #ddd;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 14px;
+}
+.menu-right a:hover{
+    color: #f00;
+    text-shadow: 0px 0px 8px rgb(255, 0, 0);
+}
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    display: inline-block;
+    position: relative;
+    margin: 10px 20px;
+}
+
+.menu ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Hiệu ứng hover */
+.menu ul li a:hover {
+    color: rgb(255, 0, 0);
+    text-shadow: 0px 0px 8px rgb(255, 0, 0);
+}
+
+/* Menu con */
+.menu ul li ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    min-width: 300px;
+    text-align: left;
+    padding: 0;
+    box-shadow: 0px 3px 10px rgba(0, 255, 255, 0.3);
+    border-radius: 5px;
+}
+
+/* Hiển thị menu con khi hover */
+.menu ul li:hover > ul {
+    display: block;
+}
+
+.menu ul li ul li {
+    display: block;
+    padding: 12px;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu ul li ul li a {
+    color: rgb(255, 255, 255);
+    transition: color 0.3s ease;
+}
+
+.menu ul li ul li a:hover {
+    color: #f00;
+    text-shadow: 0px 0px 8px #f00;
+}
+
+
+/* ======== Quest and Answer ======== */
+.FAQ {
+    position: relative;
+    text-align: center;
+    padding: 60px 20px;
+    background: url('../img/img FAQ/1.jpeg') no-repeat center center fixed;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 92vh;
+    width: 97.5%;
+    color: #000000;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+/* Nền tối mờ cho khu vực FAQ */
+.FAQ-bg {
+    background: rgba(0, 0, 0, 0.7); /* Nền tối với hiệu ứng trong suốt */
+    padding: 50px 0; /* Tạo khoảng cách với nội dung xung quanh */
+}
+
+/* Khung chứa toàn bộ FAQ */
+.FAQ-container {
+    width: 1000px; /* Cố định chiều rộng */
+    max-height: 500px;
+    background-color: rgba(0, 0, 0, 0.7); /* Nền tối màu */
+    border-radius: 10px;
+    overflow-y: auto; /* Ẩn nội dung nếu tràn */
+    padding: 10px;
+    position: absolute; /* Cố định vị trí */
+    top: 50%;
+    left: 20%;
+    transform: translateY(-50%);
+}
+.FAQ-container::-webkit-scrollbar {
+    display: none;
+}
+
+.FAQ-container {
+    scrollbar-width: none;
+}
+
+/* Căn chỉnh bố cục FAQ */
+.FAQ-control {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Khoảng cách giữa các mục */
+}
+
+/* Mục câu hỏi */
+.FAQ-control details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.FAQ-control details summary {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px; /* Giữ khoảng cách hai bên */
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    position: relative;
+    list-style: none; /* Loại bỏ dấu mặc định */
+}
+
+.FAQ-control details summary::before {
+    content: "▶"; /* Hiển thị số thứ tự */
+    font-weight: bold;
+    margin-right: 10px; /* Giữ khoảng cách với nội dung */
+    color: #fff;
+}
+
+/* Đảm bảo danh sách hiển thị đúng */
+.FAQ-control details ul {
+    padding-left: 20px; /* Đẩy nội dung vào một chút */
+    list-style-position: inside; /* Đảm bảo dấu chấm không bị cắt */
+}
+
+.FAQ-control details[open] summary::before {
+    transform: rotate(90deg);
+}
+
+.FAQ-control details p,
+.FAQ-control details ul {
+    padding: 15px;
+    background: #444;
+    margin: 0;
+    color: #ffffff;
+    text-align: left;
+    list-style-position: inside; /* Giữ dấu chấm bên trong khung */
+}
+
+/* Animation mở nội dung */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* ======== FOOTER ======== */
+.footer {
+    background: linear-gradient(90deg, #222, #444);
+    padding: 15px 0;
+    padding-bottom: 10px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    border-top: 3px solid #f00;
+    box-shadow: 0px -4px 10px rgba(255, 0, 0, 0.3);
+    position: relative;
+}
+
+.footer p {
+    margin: 0;
+    padding: 2px;
+}
+
+.footer p a{
+    text-decoration: none;
+    color: #bbb;
+}
+.slogan {
+    padding: 2px;
+    font-size: 25px;
+    font-weight: bold;
+}
+/* ======== RESPONSIVE ======== */
+@media (max-width: 768px) {
+    .menu ul li {
+        display: block;
+        text-align: left;
+    }
+
+    .menu ul li ul {
+        position: static;
+        display: block;
+        background: transparent;
+        box-shadow: none;
+    }
+
+    .gt {
+        max-width: 95%;
+        padding: 15px;
+    }
+
+    .index {
+        padding: 80px 20px;
+        font-size: 22px;
+    }
+}
+/*animation*/
+@keyframes shaking {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+}
+/*button*/
+
+#moveTopBtn {
+    position: fixed; /* Luôn cố định ở một vị trí */
+    bottom: 20px; /* Cách đáy 20px */
+    right: 20px; /* Cách phải 20px */
+    background-color: #ffcc00;
+    color: black;
+    border: none;
+    padding: 10px 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    opacity: 0; /* Mặc định ẩn */
+    transform: translateY(100px); /* Ẩn xuống dưới */
+}
+
+#moveTopBtn img{
+    height: 25px;
+    width: 20px;
+}
+
+#moveTopBtn.show {
+    opacity: 1; /* Hiện ra */
+    transform: translateY(0); /* Di chuyển lên */
+}
+
+#moveTopBtn:hover {
+    background-color: #ffaa00;
+    transform: scale(1.1);
+}
+
+
+
