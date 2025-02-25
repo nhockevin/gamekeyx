@@ -209,7 +209,10 @@ body {
     margin-right: 0%;
     width: fit-content;
 }
-
+.product-link {
+    text-decoration: none; /* Xóa gạch chân mặc định */
+    color: inherit; /* Giữ nguyên màu chữ */
+}
 .product-card{
     border-radius: 10px;
     text-align: center;

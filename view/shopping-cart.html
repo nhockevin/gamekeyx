@@ -2,8 +2,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liên Hệ</title>
-    <link rel="stylesheet" href="asm/public/css/contact.css">
+    <title>Giỏ Hàng</title>
+    <link rel="stylesheet" href="../public/css/cart.css">
 </head>
 <body>
 
@@ -24,28 +24,33 @@
             </ul>
         </div>
         <div class="menu-left">
-            <a href="index.html"><img src="asm/public/img/GameKeyX.png" alt="logo" url="index.html"></a>  
+            <a href="index.html"><img src="../public/img/GameKeyX.png" alt="logo" url="index.html"></a>  
         </div>
         <div class="menu-right">
-            <a href="asm/view/login/login.html">Đăng nhập <img src="asm/public/img/icon/login.png" alt="login" title="login"> </a>
+            <a href="login/login.html">Đăng nhập <img src="../public/img/icon/login.png" alt="login" title="login"> </a>
             / 
-            <a href="shopping-cart.html"> Giỏ hàng <img src="asm/public/img/icon/shopping.png" alt="shopping-cart" title="shopping-cart"></a>
+            <a href="shopping-cart.html"> Giỏ hàng <img src="../public/img/icon/shopping.png" alt="shopping-cart" title="shopping-cart"></a>
         </div>
     </nav>
-    <div class="contact-container">
-        <div class="contact-box">
-            <h2>Thông tin liên hệ</h2>
-            <p><strong>Thành viên 1:</strong> Đặng Huy Hoàng</p>
-            <p>MSSV: PS44595 | SĐT: 0903304084</p>
-            <p>Email: <a href="mailto:nhockevin1808@gmail.com">nhockevin1808@gmail.com</a></p>
-    
-            <p><strong>Thành viên 2:</strong> Đào Thái Tú</p>
-            <p>MSSV: PS44732 | SĐT: 0962414498</p>
-            <p>Email: <a href="mailto:daothaitu11@gmail.com">daothaitu11@gmail.com</a></p>
-    
-            <p><strong>Địa chỉ:</strong> QTSC 9 Building, Đ. Tô Ký, Tân Chánh Hiệp, Quận 12, Hồ Chí Minh, Việt Nam</p>
-            <p><strong>Facebook:</strong> <a href="https://www.facebook.com/GameKeyX" target="_blank">GameKeyX</a></p>
-            <p><strong>Mail:</strong> <a href="mailto:Contact@gamekeyx.com">Contact@gamekeyx.com</a></p>
+    <div class="main-content">
+        <div class="cart-container">
+            <h2>Giỏ Hàng</h2>
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th>Sản Phẩm</th>
+                        <th>Giá</th>
+                        <th>Số Lượng</th>
+                        <th>Tổng</th>
+                        <th>Hành Động</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                    <!-- Sản phẩm sẽ được thêm vào đây -->
+                </tbody>
+            </table>
+            <p class="cart-total">Tổng tiền: <span id="total-price">0đ</span></p>
+            <button onclick="clearCart()">Xóa Tất Cả</button>
         </div>
     </div>
     <footer class="footer">
@@ -62,7 +67,7 @@
             </p>
         </div>
     </footer>
-    <button id="moveTopBtn" onclick="scrollToTop()"><img src="asm/public/img/icon/top.png" alt="move top" title="move top"></button>
-    <script src="asm/public/js/Script.js"></script>
+    <button id="moveTopBtn" onclick="scrollToTop()"><img src="../public/img/icon/top.png" alt="move top" title="move top"></button>
+    <script src="../public/js/cart.js"></script>
 </body>
 </html>

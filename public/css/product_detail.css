@@ -1,0 +1,325 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+/* Thiết lập chung */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #2b2b2b; /* Nền tối */
+    color: white;
+}
+
+/* ======== MENU ======== */
+.menu {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #000, #222);
+    padding: 0;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 255, 255, 0.3);
+    height: 80px;
+}
+
+.menu-left{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-self: flex-start;
+    height: 100%;
+    overflow: hidden;
+    padding-left: 100px;
+}
+
+.menu-left img{
+    height: 60px;
+    width: auto;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.menu-center{
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menu-right{
+    flex: 0,5;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-right: 30px;
+}
+
+.menu-right img{
+    height: 24px;
+    width: 24px;
+    vertical-align: middle;
+    padding-right: 10px;
+
+}
+.menu-right a{
+    color: #ddd;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 14px;
+}
+.menu-right a:hover{
+    color: #f00;
+    text-shadow: 0px 0px 8px rgb(255, 0, 0);
+}
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    display: inline-block;
+    position: relative;
+    margin: 10px 20px;
+}
+
+.menu ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Hiệu ứng hover */
+.menu ul li a:hover {
+    color: rgb(255, 0, 0);
+    text-shadow: 0px 0px 8px rgb(255, 0, 0);
+}
+
+/* Menu con */
+.menu ul li ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    min-width: 300px;
+    text-align: left;
+    padding: 0;
+    box-shadow: 0px 3px 10px rgba(0, 255, 255, 0.3);
+    border-radius: 5px;
+}
+
+/* Hiển thị menu con khi hover */
+.menu ul li:hover > ul {
+    display: block;
+}
+
+.menu ul li ul li {
+    display: block;
+    padding: 12px;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu ul li ul li a {
+    color: rgb(255, 255, 255);
+    transition: color 0.3s ease;
+}
+
+.menu ul li ul li a:hover {
+    color: #f00;
+    text-shadow: 0px 0px 8px #f00;
+}
+
+
+/* ======== Login ======== */
+.game-detail {
+    max-width: 800px;
+    margin: auto;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 71, 87, 0.6);
+}
+
+.game-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.game-info {
+    text-align: left;
+    margin-top: 15px;
+}
+
+.game-video {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.game-requirements {
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.game-requirements table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.game-requirements td {
+    padding: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+/* Đẩy nội dung xuống xíu để không che hình */
+.container {
+    margin-top: 50px;
+}
+
+/* Phần giá tiền và nút mua */
+.game-purchase {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.product-price {
+    font-size: 20px;
+    color: #ff4757;
+    font-weight: bold;
+}
+
+.buy-now, .add-to-cart {
+    background-color: #ff4757;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buy-now:hover, .add-to-cart:hover {
+    background-color: #ff6b81;
+}
+.discount-info {
+    font-size: 16px;
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+.game-benefit {
+    font-size: 14px;
+    color: #ddd;
+    margin-bottom: 10px;
+}
+
+/* ======== FOOTER ======== */
+.footer {
+    background: linear-gradient(90deg, #222, #444);
+    padding: 15px 0;
+    padding-bottom: 10px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    border-top: 3px solid #f00;
+    box-shadow: 0px -4px 10px rgba(255, 0, 0, 0.3);
+    position: relative;
+}
+
+.footer p {
+    margin: 0;
+    padding: 2px;
+}
+
+.footer p a{
+    text-decoration: none;
+    color: #bbb;
+}
+.slogan {
+    padding: 2px;
+    font-size: 25px;
+    font-weight: bold;
+}
+/* ======== RESPONSIVE ======== */
+@media (max-width: 768px) {
+    .menu ul li {
+        display: block;
+        text-align: left;
+    }
+
+    .menu ul li ul {
+        position: static;
+        display: block;
+        background: transparent;
+        box-shadow: none;
+    }
+
+    .gt {
+        max-width: 95%;
+        padding: 15px;
+    }
+
+    .index {
+        padding: 80px 20px;
+        font-size: 22px;
+    }
+}
+/*animation*/
+@keyframes shaking {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+}
+/*button*/
+
+#moveTopBtn {
+    position: fixed; /* Luôn cố định ở một vị trí */
+    bottom: 20px; /* Cách đáy 20px */
+    right: 20px; /* Cách phải 20px */
+    background-color: #ffcc00;
+    color: black;
+    border: none;
+    padding: 10px 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    opacity: 0; /* Mặc định ẩn */
+    transform: translateY(100px); /* Ẩn xuống dưới */
+}
+
+#moveTopBtn img{
+    height: 25px;
+    width: 20px;
+}
+
+#moveTopBtn.show {
+    opacity: 1; /* Hiện ra */
+    transform: translateY(0); /* Di chuyển lên */
+}
+
+#moveTopBtn:hover {
+    background-color: #ffaa00;
+    transform: scale(1.1);
+}
+
+
+

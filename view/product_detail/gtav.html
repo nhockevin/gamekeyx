@@ -1,0 +1,122 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Theft Auto V</title>
+    <link rel="stylesheet" href="../../public/css/product_detail.css">
+</head>
+<body>
+
+    <nav class="menu">
+        <div class="menu-center">
+            <ul>
+                <li><a href="../index.html">Trang Chủ</a></li>
+                <li><a href="../product.html">Sản Phẩm</a>
+                    <ul>
+                        <li><a href="../product_new.html">Sản Phẩm Mới</a></li>
+                        <li><a href="../product_sale.html">Sản Phẩm Khuyến Mãi</a></li>
+                        <li><a href="../product_all.html">Tất Cả Sản Phẩm</a></li>
+                    </ul>
+                </li>
+                <li><a href="../introduce.html">Giới Thiệu</a></li>
+                <li><a href="../QA.html">FAQ</a></li>
+                <li><a href="../contact.html">Liên Hệ</a></li>
+            </ul>
+        </div>
+        <div class="menu-left">
+            <a href="../index.html"><img src="../../public/img/GameKeyX.png" alt="logo" url="index.html"></a>  
+        </div>
+        <div class="menu-right">
+            <a href="../login/login.html">Đăng nhập <img src="../../public/img/icon/login.png" alt="login" title="login"> </a>
+            / 
+            <a href="../shopping-cart.html"> Giỏ hàng <img src="../../public/img/icon/shopping.png" alt="shopping-cart" title="shopping-cart"></a>
+        </div>
+    </nav>
+    <!-- Nội dung trang -->
+    <div class="container">
+        <div class="game-detail">
+            <!-- Hình ảnh -->
+            <div class="game-image">
+                <img src="../../public/img/img san pham/GTA 5.jpg" alt="Grand Theft Auto V">
+            </div>
+
+            <!-- Giới thiệu game -->
+            <div class="game-info">
+                <h1>Grand Theft Auto V</h1>
+                <p><strong>Grand Theft Auto V</strong> (GTA 5) là một trò chơi hành động thế giới mở nổi tiếng, đưa người chơi vào thành phố hư cấu Los Santos với những phi vụ kịch tính.</p>
+                <p>Người chơi có thể điều khiển ba nhân vật chính với các nhiệm vụ khác nhau, từ đua xe, cướp ngân hàng đến khám phá thế giới mở rộng lớn.</p>
+            </div>
+
+            <!-- Video Trailer -->
+            <div class="game-video">
+                <h2>Trailer Game</h2>
+                <iframe id="gameVideo" width="100%" height="550"
+                    src="https://www.youtube.com/embed/hvoD7ehZPcM?enablejsapi=1"
+                    frameborder="0" allowfullscreen>
+                </iframe>
+            </div>
+
+            <!-- Cấu hình đề nghị -->
+            <div class="game-requirements">
+                <h2>Cấu Hình Đề Nghị</h2>
+                <table>
+                    <tr><td><strong>Hệ điều hành:</strong></td><td>Windows 10 64-bit</td></tr>
+                    <tr><td><strong>Vi xử lý:</strong></td><td>Intel Core i5 3470 / AMD X8 FX-8350</td></tr>
+                    <tr><td><strong>RAM:</strong></td><td>8 GB</td></tr>
+                    <tr><td><strong>Card đồ họa:</strong></td><td>NVIDIA GTX 660 / AMD HD 7870</td></tr>
+                    <tr><td><strong>Dung lượng:</strong></td><td>100 GB</td></tr>
+                </table>
+            </div>
+            <div class="game-purchase" style="text-align: center;">
+                <div class="price-container">
+                    <p class="product-price">
+                        <del>499.000đ</del>
+                        <strong>190.000đ</strong>
+                    </p>
+                    <p class="discount-info">🔥 Giảm giá cực sốc! Chỉ áp dụng trong tuần này!</p>
+                    <p class="game-benefit">🎮 Mua ngay để nhận bản quyền vĩnh viễn & hỗ trợ cập nhật trọn đời.</p>
+                </div>
+                <button class="buy-now">Mua Ngay</button>
+                <button class="add-to-cart" data-name="Grand Theft Auto V" data-price="190000">
+                    Thêm vào giỏ hàng
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="bot">
+            <p>
+                @2025 Trang Web Được Tạo Bởi "Đặng Huy Hoàng & Đào Thái Tú"
+            </p>
+            <p class="contact-footer">
+                Liên hệ: <a href="mailto:contact@gamekeyx.com">contact@gamekeyx.com</a> | 
+                <a href="https://www.facebook.com/GameKeyX" target="_blank">Facebook</a>
+            </p>
+            <p class="slogan">
+                "Chơi game không chỉ là giải trí, mà còn là đam mê!"
+            </p>
+        </div>
+    </footer>
+    <button id="moveTopBtn" onclick="scrollToTop()"><img src="../../public/img/icon/top.png" alt="move top" title="move top"></button>
+    <script src="../../public/js/Script.js"></script>
+    <script>
+        var player;
+    
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('gameVideo', {
+                events: {
+                    'onReady': onPlayerReady
+                }
+            });
+        }
+    
+        function onPlayerReady(event) {
+            console.log("YouTube Player đã sẵn sàng!");
+        }
+    </script>
+    
+    <!-- Tải API YouTube -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forza Horizon 5</title>
+    <link rel="stylesheet" href="../../public/css/product_detail.css">
+</head>
+<body>
+
+    <nav class="menu">
+        <div class="menu-center">
+            <ul>
+                <li><a href="../index.html">Trang Chủ</a></li>
+                <li><a href="../product.html">Sản Phẩm</a>
+                    <ul>
+                        <li><a href="../product_new.html">Sản Phẩm Mới</a></li>
+                        <li><a href="../product_sale.html">Sản Phẩm Khuyến Mãi</a></li>
+                        <li><a href="../product_all.html">Tất Cả Sản Phẩm</a></li>
+                    </ul>
+                </li>
+                <li><a href="../introduce.html">Giới Thiệu</a></li>
+                <li><a href="../QA.html">FAQ</a></li>
+                <li><a href="../contact.html">Liên Hệ</a></li>
+            </ul>
+        </div>
+        <div class="menu-left">
+            <a href="../index.html"><img src="../../public/img/GameKeyX.png" alt="logo" url="index.html"></a>  
+        </div>
+        <div class="menu-right">
+            <a href="../login/login.html">Đăng nhập <img src="../../public/img/icon/login.png" alt="login" title="login"> </a>
+            / 
+            <a href="../shopping-cart.html"> Giỏ hàng <img src="../../public/img/icon/shopping.png" alt="shopping-cart" title="shopping-cart"></a>
+        </div>
+    </nav>
+    <!-- Nội dung trang -->
+    <div class="container">
+        <div class="game-detail">
+            <div class="game-image">
+                <img src="../../public/img/img san pham/Forza Horizon 5.jpg" alt="Forza Horizon 5">
+            </div>
+            <div class="game-info">
+                <h1>Forza Horizon 5</h1>
+                <p><strong>Forza Horizon 5</strong> là tựa game đua xe thế giới mở hấp dẫn nhất năm 2021. Được phát triển bởi Playground Games, game mang đến cho người chơi một thế giới mở rộng lớn nhất trong lịch sử series Forza Horizon. Bạn sẽ được khám phá vùng đất Mexico với những cảnh quan tuyệt đẹp như rừng rậm, sa mạc và bãi biển đầy nắng.</p>
+                <p>Forza Horizon 5 còn được đánh giá là có hệ thống đồ họa tuyệt đẹp nhất trong số các phiên bản trước đó của series. Những chiếc xe sẽ được mô phỏng với độ chân thật cao, mang lại cho người chơi những trải nghiệm đua xe chân thật nhất.</p>
+            </div>
+            <div class="game-video">
+                <h2>Trailer Game</h2>
+                <iframe width="100%" height="550" src="https://www.youtube.com/embed/FYH9n37B7Yw" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="game-requirements">
+                <h2>Cấu Hình Đề Nghị</h2>
+                <table>
+                    <tr><td><strong>Hệ điều hành:</strong></td><td>Windows 10 64-bit</td></tr>
+                    <tr><td><strong>CPU:</strong></td><td>Intel i7-10700K / AMD Ryzen 7 3800X</td></tr>
+                    <tr><td><strong>RAM:</strong></td><td>16 GB</td></tr>
+                    <tr><td><strong>GPU:</strong></td><td>NVIDIA RTX 2080 / AMD RX 6800 XT</td></tr>
+                    <tr><td><strong>Dung lượng:</strong></td><td>110 GB</td></tr>
+                </table>
+            </div>
+            <div class="game-purchase" style="text-align: center;">
+                <div class="price-container">
+                    <p class="product-price"><strong>1.399.000đ</strong></p>
+                    <p class="game-benefit">🏎️ Tận hưởng tốc độ đỉnh cao và đồ họa tuyệt đẹp!</p>
+                </div>
+                <button class="buy-now">Mua Ngay</button>
+                <button class="add-to-cart" data-name="Forza Horizon 5" data-price="1399000">
+                    Thêm vào giỏ hàng
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="bot">
+            <p>
+                @2025 Trang Web Được Tạo Bởi "Đặng Huy Hoàng & Đào Thái Tú"
+            </p>
+            <p class="contact-footer">
+                Liên hệ: <a href="mailto:contact@gamekeyx.com">contact@gamekeyx.com</a> | 
+                <a href="https://www.facebook.com/GameKeyX" target="_blank">Facebook</a>
+            </p>
+            <p class="slogan">
+                "Chơi game không chỉ là giải trí, mà còn là đam mê!"
+            </p>
+        </div>
+    </footer>
+    <button id="moveTopBtn" onclick="scrollToTop()"><img src="../../public/img/icon/top.png" alt="move top" title="move top"></button>
+    <script src="../../public/js/Script.js"></script>
+    <script>
+        var player;
+    
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('gameVideo', {
+                events: {
+                    'onReady': onPlayerReady
+                }
+            });
+        }
+    
+        function onPlayerReady(event) {
+            console.log("YouTube Player đã sẵn sàng!");
+        }
+    </script>
+    
+    <!-- Tải API YouTube -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+</body>
+</html>

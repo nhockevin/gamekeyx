@@ -1,0 +1,109 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assassins Creed Valhalla</title>
+    <link rel="stylesheet" href="../../public/css/product_detail.css">
+</head>
+<body>
+
+    <nav class="menu">
+        <div class="menu-center">
+            <ul>
+                <li><a href="../index.html">Trang Chủ</a></li>
+                <li><a href="../product.html">Sản Phẩm</a>
+                    <ul>
+                        <li><a href="../product_new.html">Sản Phẩm Mới</a></li>
+                        <li><a href="../product_sale.html">Sản Phẩm Khuyến Mãi</a></li>
+                        <li><a href="../product_all.html">Tất Cả Sản Phẩm</a></li>
+                    </ul>
+                </li>
+                <li><a href="../introduce.html">Giới Thiệu</a></li>
+                <li><a href="../QA.html">FAQ</a></li>
+                <li><a href="../contact.html">Liên Hệ</a></li>
+            </ul>
+        </div>
+        <div class="menu-left">
+            <a href="../index.html"><img src="../../public/img/GameKeyX.png" alt="logo" url="index.html"></a>  
+        </div>
+        <div class="menu-right">
+            <a href="../login/login.html">Đăng nhập <img src="../../public/img/icon/login.png" alt="login" title="login"> </a>
+            / 
+            <a href="../shopping-cart.html"> Giỏ hàng <img src="../../public/img/icon/shopping.png" alt="shopping-cart" title="shopping-cart"></a>
+        </div>
+    </nav>
+    <!-- Nội dung trang -->
+    <div class="container">
+        <div class="game-detail">
+            <div class="game-image">
+                <img src="../../public/img/img san pham/Assassins Creed Valhalla.jpg" alt="Assassin's Creed Valhalla">
+            </div>
+            <div class="game-info">
+                <h1>Assassin's Creed Valhalla</h1>
+                <p><strong>Assassin’s Creed Valhalla</strong>, phiên bản mới nhất vừa ra mắt của dòng game đình đám này chính là đỉnh điểm của những tranh cãi mà Ubisoft định hướng cho dòng game này trong tương lai.</p>
+                <p>Chẳng ai nhận ra một tay sát thủ lăm lăm vũ khí “tả xung, hữu đột” giữa vòng vây kẻ thù trong một trận công thành chiến; chẳng ai nhận ra lý tưởng đấu tranh cho tự do và bình quyền qua những chiến thuyền cướp bóc và tàn phá làng mạc; cũng chẳng ai nhận ra tổ chức bảo vệ hòa bình thế giới được khởi đầu trong Assassin’s Creed Origins lại là những kẻ khát máu yêu thích sự hỗn loạn, hủy diệt…</p>
+                <p>Những gì mà mọi phiên bản Assassin’s Creed trước đây tạo lập danh tiếng, đều bị Ubisoft “xóa nhòa” trong trailer ra mắt của Assassin’s Creed Valhalla.</p>
+            </div>
+            <div class="game-video">
+                <h2>Trailer Game</h2>
+                <iframe width="100%" height="550" src="https://www.youtube.com/embed/ssrNcwxALS4" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="game-requirements">
+                <h2>Cấu Hình Đề Nghị</h2>
+                <table>
+                    <tr><td><strong>Hệ điều hành:</strong></td><td>Windows 10 64-bit</td></tr>
+                    <tr><td><strong>CPU:</strong></td><td>Intel i7-6700 / AMD Ryzen 7 1700</td></tr>
+                    <tr><td><strong>RAM:</strong></td><td>8 GB</td></tr>
+                    <tr><td><strong>GPU:</strong></td><td>NVIDIA GTX 1080 / AMD RX Vega 64</td></tr>
+                    <tr><td><strong>Dung lượng:</strong></td><td>50 GB</td></tr>
+                </table>
+            </div>
+            <div class="game-purchase" style="text-align: center;">
+                <div class="price-container">
+                    <p class="product-price"><strong>699.000đ</strong></p>
+                    <p class="game-benefit">⚔️ Trải nghiệm cuộc phiêu lưu Viking chân thực nhất!</p>
+                </div>
+                <button class="buy-now">Mua Ngay</button>
+                <button class=".add-to-cart" data-name="Assassin's Creed Valhalla" data-price="699000">
+                    Thêm vào giỏ hàng
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="bot">
+            <p>
+                @2025 Trang Web Được Tạo Bởi "Đặng Huy Hoàng & Đào Thái Tú"
+            </p>
+            <p class="contact-footer">
+                Liên hệ: <a href="mailto:contact@gamekeyx.com">contact@gamekeyx.com</a> | 
+                <a href="https://www.facebook.com/GameKeyX" target="_blank">Facebook</a>
+            </p>
+            <p class="slogan">
+                "Chơi game không chỉ là giải trí, mà còn là đam mê!"
+            </p>
+        </div>
+    </footer>
+    <button id="moveTopBtn" onclick="scrollToTop()"><img src="../../public/img/icon/top.png" alt="move top" title="move top"></button>
+    <script src="../../public/js/Script.js"></script>
+    <script>
+        var player;
+    
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('gameVideo', {
+                events: {
+                    'onReady': onPlayerReady
+                }
+            });
+        }
+    
+        function onPlayerReady(event) {
+            console.log("YouTube Player đã sẵn sàng!");
+        }
+    </script>
+    
+    <!-- Tải API YouTube -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+</body>
+</html>
