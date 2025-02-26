@@ -82,13 +82,22 @@ document.addEventListener("DOMContentLoaded", function () {
             let index = btn.getAttribute("data-index");
             cart.splice(index, 1);
             localStorage.setItem("cart", JSON.stringify(cart));
-            location.reload();
+    
+            if (cart.length === 0) {
+                document.querySelector("#cart-items").innerHTML = "<tr><td colspan='5'>Giỏ hàng trống</td></tr>";
+                document.querySelector("#total-price").innerText = "0đ";
+            } else {
+                location.reload();
+            }
         });
     });
+    
 
     // Xóa toàn bộ giỏ hàng
-    document.querySelector("button[onclick='clearCart()']").addEventListener("click", () => {
+    document.querySelector("#clear-cart").addEventListener("click", () => {
         localStorage.removeItem("cart");
-        location.reload();
+        document.querySelector("#cart-items").innerHTML = "<tr><td colspan='5'>Giỏ hàng trống</td></tr>";
+        document.querySelector("#total-price").innerText = "0đ";
     });
+    
 });
